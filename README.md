@@ -22,19 +22,19 @@ make && ./fdf name_of_your_file
 
 # How it works
 
-In order to be able to use the graphic library and create anything, you must initialize the minilibx pointer, which will be the one enables you to use all the functions.
+In order to use the graphic library, you must initialize the minilibx pointer, which enables you to use all the minilibx functions.
 
-The program first reads the entry from the file using get_next_line(), one line at a time, and divides every number into a separate string using ft_strsplit() (get_grid.c).
+The program first reads the entry from the file using get_next_line(), one line at a time, and divides every map entry into a separate string using ft_strsplit() (get_grid.c).
 
-After that, sets z to the number inputted, and X and Y to an initial value.
+Next, the z coordinate is set to the explicit number on the map (ft_atoi), x and y are set to their relative map placement.
 
-The next step is to make the input coordinates into 3d. I do that by changing X and Y using the equation:
+The next step is to project the 3D coordinates to 2D. X and Y are projected using the following equation:
 
 NEW_X = ((FOCAL_DISTANCE * OLD_X) / ((z_max + 5) - Z)) + WIN_WIDTH / 4;
 NEW_Y = ((FOCAL_DISTANCE * OLD_Y) / ((z_max + 5) - Z)) + WIN_HEIGHT / 4;
 
-After these new coordinates are set, all that is left is to connect the dots.
+Finally, the grid must be constructed by connecting the pixels.
 
-The program connects the dots using Bresenham's line algorithm. It iterates one coordinate at a time and connects to the next coordinate to the left, and below.
+The program draws a line between pixels using Bresenham's line algorithm. It iterates one coordinate at a time and connects to the next pixel to the right, and then the one below.
 
 mlx enters the drawing loop, and now ALL IS WELL!
