@@ -6,26 +6,17 @@ Use the library minlibx to make 3D images. Minlibx lets you check for mouse clic
 Use a file containing numbers separated by spaces, where the numbers represent the height (z-axis). Like this:
 
 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-
 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
-
 0  0 10 10  0  0 10 10  0  0  0 10 10 10 10 10  0  0  0
-
 0  0 10 10  0  0 10 10  0  0  0  0  0  0  0 10 10  0  0
-
 0  0 10 10  0  0 10 10  0  0  0  0  0  0  0 10 10  0  0
-
 0  0 10 10 10 10 10 10  0  0  0  0 10 10 10 10  0  0  0
-
 0  0  0 10 10 10 10 10  0  0  0 10 10  0  0  0  0  0  0
-
 0  0  0  0  0  0 10 10  0  0  0 10 10  0  0  0  0  0  0
-
 0  0  0  0  0  0 10 10  0  0  0 10 10 10 10 10 10  0  0
-
+0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 
-0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
 
 make && ./fdf name_of_your_file
 
